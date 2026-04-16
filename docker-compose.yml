@@ -1,0 +1,12 @@
+services:
+  frontend:
+    container_name: my_site_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://127.0.0.1:8000}
+    image: my_site_frontend:latest
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    restart: unless-stopped

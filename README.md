@@ -24,6 +24,35 @@ npm run build
 npm run preview
 ```
 
+## Docker 部署
+
+### 1. 配置环境变量
+
+```bash
+cp .env.docker.example .env.docker
+```
+
+至少需要确认：
+
+- `FRONTEND_PORT`：前端容器映射端口（默认 `8080`）
+- `VITE_API_BASE_URL`：后端 API 地址（会在构建时注入）
+
+### 2. 启动容器
+
+```bash
+docker compose --env-file .env.docker up -d --build
+```
+
+### 3. 停止容器
+
+```bash
+docker compose down
+```
+
+### 4. 访问地址
+
+默认访问：`http://127.0.0.1:8080`
+
 ## 已接入接口
 
 - `GET /api/mysite/v1/home/`：首页聚合数据（文章、热门、分类、标签、归档、轮播、友链）
