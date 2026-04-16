@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchHomeFeed } from '../api/blog';
 import CalendarWidget from '../components/CalendarWidget';
+import SiteFooter from '../components/SiteFooter';
 import SidebarSection from '../components/SidebarSection';
 import SiteHeader from '../components/SiteHeader';
 import { getCachedSiteStats, updateCachedSiteStats } from '../utils/siteStats';
@@ -429,6 +430,8 @@ function HomePage() {
           </SidebarSection>
         </aside>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchHomeFeed } from '../api/blog';
 import SidebarSection from '../components/SidebarSection';
+import SiteFooter from '../components/SiteFooter';
 import SiteHeader from '../components/SiteHeader';
 import { getCachedSiteStats, updateCachedSiteStats } from '../utils/siteStats';
 
@@ -160,6 +161,8 @@ function AboutPage() {
           </SidebarSection>
         </aside>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

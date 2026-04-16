@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { createComment, fetchArticleDetail, fetchComments } from '../api/blog';
 import SidebarSection from '../components/SidebarSection';
+import SiteFooter from '../components/SiteFooter';
 import SiteHeader from '../components/SiteHeader';
 import { renderContentHtml } from '../utils/markdown';
 
@@ -311,6 +312,8 @@ function ArticlePage() {
           </aside>
         </main>
       )}
+
+      <SiteFooter />
     </div>
   );
 }

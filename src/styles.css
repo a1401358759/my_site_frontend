@@ -73,7 +73,10 @@ a {
 
 .page-shell {
   width: min(1260px, calc(100% - 28px));
-  margin: 14px auto 48px;
+  margin: 14px auto 0;
+  min-height: calc(100vh - 14px);
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
@@ -1298,6 +1301,41 @@ a {
   display: grid;
   gap: 8px;
   color: #c8dafd;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 18px 0 16px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #9eb8e8;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.site-footer p + p {
+  margin-top: 2px;
+}
+
+.site-footer a {
+  color: inherit;
+  font-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-footer a:hover {
+  color: inherit;
+}
+
+.site-footer img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 @keyframes card-enter {
